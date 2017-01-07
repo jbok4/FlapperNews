@@ -12,11 +12,6 @@ function($stateProvider, $urlRouterProvider) {
       templateUrl: '/home.html',
       controller: 'MainCtrl'
     })
-    .state('posts', {
-      url: '/posts/{id}',
-      templateUrl: '/posts.html',
-      controller: 'PostsCtrl'
-    });
 
   $urlRouterProvider.otherwise('home');
 }])
@@ -32,7 +27,6 @@ function($stateProvider, $urlRouterProvider) {
   '$scope',
   'posts',
   function($scope, posts){
-    $scope.test = 'Hello World!';
     $scope.posts = posts.posts;
 
     $scope.addPost = function() {
@@ -55,6 +49,20 @@ function($stateProvider, $urlRouterProvider) {
     };
 
   }])
+
+.directive('postList', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'partials/posts.html'
+  }
+})
+
+.directive('formPartial', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'partials/form.html'
+  }
+})
 
   .controller('PostsCtrl', [
   '$scope',
