@@ -1,0 +1,29 @@
+body {
+
+background: #1A2980; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #1A2980 , #26D0CE); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #1A2980 , #26D0CE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+             
+}
+
+span {
+  color: white;
+  font-weight: 100;
+}
+
+h1 {
+color: white; 
+font-family: 'Open Sans Condensed', sans-serif; 
+font-size: 54px; 
+font-weight: 500; 
+line-height: 64px; 
+margin: 0 0 0; 
+padding: 20px 30px; 
+text-align: center; 
+text-transform: uppercase;
+}
+
+.well.well-sm {
+  background-color: rgba(255,255,255,.15);
+    border: 1px solid #e3e3e3;
+}
